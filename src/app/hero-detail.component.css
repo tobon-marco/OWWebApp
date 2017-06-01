@@ -1,0 +1,49 @@
+@font-face
+{
+    font-family: "ow";
+    src: url("https://overwatch-a.akamaihd.net/fonts/big-noodle-too-oblique-0762bcfb7ce452ecfa21830ab40ee34f9bf2e6fbcecb649c8995bd59fdf93a74a8345855c3890ec3901ac7ca442040112f37f387c98a57ced5af61d92ee8e06c.woff") format('woff');
+}
+h1
+{
+	color: red;
+	font-size: 80px;
+    font-family: ow;
+}
+ul.abList li
+{
+    font-family: ow;
+    font-size: 30px;
+}
+label {
+  display: inline-block;
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc; 
+  cursor: auto;
+}
+.center
+{
+	text-align:center;
+}

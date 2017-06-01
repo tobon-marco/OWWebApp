@@ -1,0 +1,25 @@
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+.caption, h1
+{
+	text-align:center;
+}
+.askDetail
+{
+	text-align:center;
+}
+

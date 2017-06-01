@@ -1,0 +1,40 @@
+<h1 class="header"> My Heroes </h1>
+
+<!-- IF A HERO IS SELECTED THEN IT WILL DISPLAY A MODAL TO SEE IF THEY WANT TO VIEW DETAILS -->
+<div *ngIf="selectedHero" class="askDetail">
+	<!-- MODAL TO ASK TO VIEW HEROES DETAIL -->
+	<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        			<h4 class="modal-title" id="detailModalTitle">Hero Chosen</h4>
+      			</div>
+      			<div class="modal-body">
+    				<h2>
+        				{{selectedHero.name | uppercase }}
+    				</h2>
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    				<button type="button" class="btn btn-primary" (click)="gotoDetail()" data-dismiss="modal"> View Details </button>  
+      			</div>
+    		</div>
+  		</div>
+	</div>
+</div>
+
+<!-- DISPLAYS THE HEROS PICTURE AND NAME -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-2" *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected] = "hero === selectedHero" data-toggle="modal" data-target="#detailModal">
+			<div class="thumbnail">
+          		<img src="{{hero.picture}}" alt="{{hero.name}}" >
+      		</div>
+				<div class="caption">
+                	<h4> {{hero.name}} </h4> 
+				</div>
+ 		</div>
+	</div>
+</div>
+

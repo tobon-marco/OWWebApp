@@ -1,0 +1,29 @@
+import { Hero } from './hero';
+
+/** OUR HEROES ARRAY ============================================== */
+export const HEROES: Hero[] = [
+	{ id: 0, name: 'Ana' },
+	{ id: 1, name: 'Bastion' },
+	{ id: 2, name: 'D.Va' },
+	{ id: 3, name: 'Genji' },
+	{ id: 4, name: 'Hanzo' },
+	{ id: 5, name: 'Junkrat' },
+	{ id: 6, name: 'Lúcio' },
+	{ id: 7, name: 'McCree' },
+	{ id: 8, name: 'Mei' },
+	{ id: 9, name: 'Mercy' },
+	{ id: 10, name: 'Orisa' },
+	{ id: 11, name: 'Pharah' },
+	{ id: 12, name: 'Reaper' },
+	{ id: 13, name: 'Reinhardt' },
+	{ id: 14, name: 'Roadhog' },
+	{ id: 15, name: 'Soldier: 76' },
+	{ id: 16, name: 'Sombra' },
+	{ id: 17, name: 'Symmetra' },
+	{ id: 18, name: 'Torbjorn' },
+	{ id: 19, name: 'Tracer' },
+	{ id: 20, name: 'Widowmaker' },
+	{ id: 21, name: 'Winston' },
+	{ id: 22, name: 'Zarya' },
+	{ id: 23, name: 'Zenyatta' }
+];
