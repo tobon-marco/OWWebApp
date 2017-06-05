@@ -7,6 +7,7 @@ import { AppComponent }  from './app.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
+import { HeroPickerComponent } from './hero-picker.component';
 import { HeroService } from './hero.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
             AppComponent,
 			HeroDetailComponent,
 			HeroesComponent,
-            DashboardComponent
+            DashboardComponent,
+            HeroPickerComponent
         ],
 	providers:
 		[

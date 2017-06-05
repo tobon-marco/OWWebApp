@@ -1,0 +1,62 @@
+<div style="width:100%">
+	<img class="fullImg" src=" allHeroes.jpg" alt="" usemap="#Map" />
+</div>
+<map name="Map" id="Map">
+    <area [routerLink]="['/detail', 'Junkrat']" alt="" title="" shape="" coords="290,756,478,1121" />
+    <area [routerLink]="['/detail', 'Lucio']" alt="" title=""  shape="rect" coords="479,1125,616,676" />
+    <area [routerLink]="['/detail', 'Zarya']" alt="" title=""  shape="rect" coords="618,596,725,974" />
+    <area [routerLink]="['/detail', 'Tracer']" alt="" title=""  shape="rect" coords="730,676,818,957" />
+    <area [routerLink]="['/detail', 'Torbjorn']" alt="" title=""  shape="rect" coords="824,788,1111,1126" />
+    <area [routerLink]="['/detail', 'Ana']" alt="" title=""  shape="rect" coords="1107,658,1259,1122" />
+    <area [routerLink]="['/detail', 'Sombra']" alt="" title=""  shape="rect" coords="1265,1123,1342,659" />
+    <area [routerLink]="['/detail', 'Reaper']" alt="" title=""  shape="rect" coords="1344,1124,1461,580" />
+    <area [routerLink]="['/detail', 'Genji']" alt="" title=""  shape="rect" coords="348,642,478,751" />
+    <area [routerLink]="['/detail', 'Roadhog']" alt="" title=""  shape="rect" coords="150,321,614,674" />
+    <area [routerLink]="['/detail', 'Pharah']" alt="" title=""  shape="rect" coords="664,285,892,777" />
+    <area [routerLink]="['/detail', 'D.va']" alt="" title=""  shape="rect" coords="895,323,1082,642" />
+    <area [routerLink]="['/detail', 'Soldier: 76']" alt="" title=""  shape="rect" coords="899,598,1102,787" />
+    <area [routerLink]="['/detail', 'Orisa']" alt="" title=""  shape="rect" coords="1084,468,1366,654" />
+    <area [routerLink]="['/detail', 'Reinhardt']" alt="" title=""  shape="rect" coords="1270,408,1775,612" />
+    <area [routerLink]="['/detail', 'Symmetra']" alt="" title=""  shape="rect" coords="1441,656,1570,1130" />
+    <area [routerLink]="['/detail', 'Wingston']" alt="" title=""  shape="rect" coords="1491,563,1791,844" />
+    <area [routerLink]="['/detail', 'Zenyatta']" alt="" title=""  shape="rect" coords="1595,769,1841,1121" />
+    <area [routerLink]="['/detail', 'Hanzo']" alt="" title=""  shape="rect" coords="1791,620,1960,1132" />
+    <area [routerLink]="['/detail', 'Widowmaker']" alt="" title=""  shape="rect" coords="1935,598,2066,1045" />
+    <area [routerLink]="['/detail', 'Mei']" alt="" title=""  shape="rect" coords="2048,669,2243,1148" />
+    <area [routerLink]="['/detail', 'Mcree']" alt="" title=""  shape="rect" coords="2204,625,2382,1131" />
+    <area [routerLink]="['/detail', 'Mercy']" alt="" title=""  shape="rect" coords="1698,407,1931,616" />
+    <area [routerLink]="['/detail', 'Bastion']" alt="" title=""  shape="rect" coords="1979,457,2363,621" />
+</map>
+
+<script>
+window.onload = function () {
+    var ImageMap = function (map) {
+            var n,
+                areas = map.getElementsByTagName('area'),
+                len = areas.length,
+                coords = [],
+                previousWidth = 2560;
+            for (n = 0; n < len; n++) {
+                coords[n] = areas[n].coords.split(',');
+            }
+            this.resize = function () {
+                var n, m, clen,
+                    x = document.body.clientWidth / previousWidth;
+                for (n = 0; n < len; n++) {
+                    clen = coords[n].length;
+                    for (m = 0; m < clen; m++) {
+                        coords[n][m] *= x;
+                    }
+                    areas[n].coords = coords[n].join(',');
+                }
+                previousWidth = document.body.clientWidth;
+                return true;
+            };
+            window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('Map'), 
+				document.getElementById('fullImg'));
+    imageMap.resize();
+}
+
+</script>
